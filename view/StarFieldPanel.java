@@ -8,11 +8,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 //Panel for Star Field (populated by interactive celestial objects)
 public class StarFieldPanel extends JPanel {
+	//instance vars
 	private SkyMap skyMap;
 	private ObjectInfoPanel infoPanel;
+	private List<int[]> backgroundStars = new ArrayList<>();
 
 	//CONSTRUCTOR
 	public StarFieldPanel(SkyMap skyMap, ObjectInfoPanel infoPanel) {
@@ -21,6 +27,28 @@ public class StarFieldPanel extends JPanel {
 
 		setBackground(Color.BLACK);
 		setupMouseListeners();
+
+		//init the background stars after component is shown to prevent issue where background stars would change on click
+		addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentShown(ComponentEvent e) {
+				if (backgroundStars.isEmpty()) {
+					initBackgroundStars();
+				}
+				removeComponentListener(this);
+			}
+		});
+	}
+
+	//function to init background stars
+	private void initBackgroundStars() {
+		//generate 200 random small stars for depth
+		for (int i = 0; i < 200; i++) {
+			int x = (int)(Math.random() * getWidth());
+			int y = (int)(Math.random() * getHeight());
+			int size = (int)(Math.random() * 2) + 1;
+			backgroundStars.add(new int[]{x, y, size});
+		}
 	}
 
 	//function to set up mouse listeners
@@ -69,17 +97,18 @@ public class StarFieldPanel extends JPanel {
 		drawCoordinateGrid(g);
 	}
 
-	//function to draw the lil background stars
+	//function to draw the lil background stars for the first timeif not yet drawn or retrieve if drawn already
 	private void drawBackgroundStars(Graphics g) {
 		g.setColor(new Color(180, 180, 180));
 
-		//200 random small stars for now just for depth
-		for (int i = 0; i < 200; i++) {
-			int x = (int)(Math.random() * getWidth());
-			int y = (int)(Math.random() * getHeight());
-			int size = (int)(Math.random() * 2) + 1;
+		//if not drawn yet, draw them
+		if(backgroundStars.isEmpty()) {
+			initBackgroundStars();
+		}
 
-			g.fillRect(x, y, size, size);
+		//if already drawn, just retrieve on repaint
+		for (int[] star : backgroundStars) {
+			g.fillRect(star[0], star[1], star[2], star[2]);
 		}
 	}
 
