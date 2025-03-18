@@ -10,6 +10,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JSplitPane;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
+import javax.swing.JLabel;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension; 
 import java.awt.event.ActionEvent;

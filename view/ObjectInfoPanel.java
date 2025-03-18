@@ -35,7 +35,7 @@ public class ObjectInfoPanel extends JPanel {
 		titleLabel = new JLabel("Select an object in the sky");
 		titleLabel.setFont(new Font("Sans-Serif", Font.BOLD, 16));
 
-		infoTextArea = newJTextArea(10, 30);
+		infoTextArea = new JTextArea(10, 30);
 		infoTextArea.setEditable(false);
 		infoTextArea.setLineWrap(true);
 		infoTextArea.setWrapStyleWord(true);
