@@ -56,7 +56,7 @@ public class Galaxy extends CelestialObject {
 		info.append("Declination: ").append(String.format("%.2f", getDeclination())).append("°\n");
 		info.append("Apparent Magnitude: ").append(String.format("%.2f", getApparentMagnitude())).append("\n");
 		info.append("Redshift (z): ").append(String.format("%.4f", redshift)).append("\n");
-		info.append("Distance: ").append(String.format("%.2f", calculateRedshiftDistance())).append(" million light years");
+		info.append("Distance: ").append(String.format("%.2f", calcRedshiftDistance())).append(" million light years");
         
 		return info.toString();
 	}

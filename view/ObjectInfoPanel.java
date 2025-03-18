@@ -115,7 +115,7 @@ public class ObjectInfoPanel extends JPanel {
 		}
 
 		StringBuilder calc = new StringBuilder();
-		calc.append("Calculation Method: ".append(selectedMethod).append("\n\n");
+		calc.append("Calculation Method: ").append(selectedMethod).append("\n\n");
 
         if (currentObject instanceof Star) {
             Star star = (Star) currentObject;

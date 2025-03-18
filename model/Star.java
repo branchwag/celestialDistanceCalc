@@ -50,7 +50,7 @@ public class Star extends CelestialObject {
 		//d is distance in parsecs
 		//m is apparent mag
 		//M is absolute Mag
-		double distanceInParsecs = Math.pow(10, (getApparentMagnitude() - absoluteMagnitude + 5) / 5;
+		double distanceInParsecs = Math.pow(10, (getApparentMagnitude() - absoluteMagnitude + 5) / 5);
 		
 		//convert parsecs to light years
 		return distanceinParsecs * 3.26;
