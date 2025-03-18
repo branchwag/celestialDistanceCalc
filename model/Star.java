@@ -20,7 +20,7 @@ public class Star extends CelestialObject {
 	//Ex. Sun is G2V - dwarf star in G2 category
 	
 	//CONSTRUCTOR
-	public Star(String name, double rightAscension, doouble declination, double apparentMagnitude, double parallax, double absoluteMagnitude, String spectralType) {
+	public Star(String name, double rightAscension, double declination, double apparentMagnitude, double parallax, double absoluteMagnitude, String spectralType) {
 		super(name, rightAscension, declination, apparentMagnitude, getColorForSpectralType(spectralType));
 		this.parallax = parallax;
 		this.absoluteMagnitude = absoluteMagnitude;
