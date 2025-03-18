@@ -10,7 +10,7 @@ public class CelestialDistanceCalculator {
 	//main method
 	public static void main(String[] args) {
 		try {
-			UI.Manager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (Exception e) {
 			System.err.println("Error: " + e);
 		}

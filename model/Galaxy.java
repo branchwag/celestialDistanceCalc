@@ -1,6 +1,7 @@
 package com.celestialdistance.model;
 
-import java.awt.color;
+import java.awt.Graphics;
+import java.awt.Color;
 
 //class for galaxy
 //distance calc based on red-shift
@@ -19,7 +20,7 @@ public class Galaxy extends CelestialObject {
 	}
 
 	//GETTERS
-	public double getRedShift() { return redshift; }
+	public double getRedshift() { return redshift; }
 	public String getGalaxyType() { return galaxyType; }
 
 	//function to calc distance based on Hubble's law w/redshift
@@ -33,7 +34,7 @@ public class Galaxy extends CelestialObject {
 		double velocity = SPEED_OF_LIGHT * redshift; //km/s
 
 		//d = v / Ho
-		double distanceInMegaparsecs = velocity / HUBBLECONSTANT;
+		double distanceInMegaparsecs = velocity / HUBBLE_CONSTANT;
 
 		//convert megaparsecs to millions of light years
 		//1 mpc is about 3.26 million light years

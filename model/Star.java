@@ -53,7 +53,7 @@ public class Star extends CelestialObject {
 		double distanceInParsecs = Math.pow(10, (getApparentMagnitude() - absoluteMagnitude + 5) / 5);
 		
 		//convert parsecs to light years
-		return distanceinParsecs * 3.26;
+		return distanceInParsecs * 3.26;
 	}
 
 	@Override
@@ -83,10 +83,10 @@ public class Star extends CelestialObject {
 		if (parallax > 0) {
 			info.append("Parallax: ").append(String.format("%.4f", parallax)).append(" arcsec\n");
 		
-			info.append("Distance (parallax method): ").append(String.format("%.2f", calculateParallaxDistance())).append(" light years\n");
+			info.append("Distance (parallax method): ").append(String.format("%.2f", calcParallaxDistance())).append(" light years\n");
 		}
 			
-		info.append("Distance (spectroscopic method): ").append(String.format("%.2f", calculateSpectroscopicDistance())).append(" light years");
+		info.append("Distance (spectroscopic method): ").append(String.format("%.2f", calcSpecDistance())).append(" light years");
 			
 		return info.toString();
 	}
