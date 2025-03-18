@@ -10,7 +10,7 @@ public abstract class CelestialObject {
 	private String name;
 	private double rightAscension; // in hours (0 to 24)
 	private double declination; // in degrees (-90 to 90)
-	private double apparentMagnitude;
+	private double apparentMagnitude; //how bright object appears from Earth. Lower values are brighter objects here (Sun -26.74 while Sirius is -1.46)
 	private Color color;
 
 	//Constructor (with params)
@@ -20,7 +20,6 @@ public abstract class CelestialObject {
 		this.declination = declination;
 		this.apparentMagnitude = apparentMagnitude;
 		this.color = color;
-
 	}
 
 	//GETTERS

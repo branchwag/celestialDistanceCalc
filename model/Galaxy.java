@@ -46,6 +46,8 @@ public class Galaxy extends CelestialObject {
 	}
 
 	@Override
+	//function to return info on galaxies
+	//returns String that is make using StringBuilder
 	public String getInfo() {
 		StringBuilder info = new StringBuilder();
 		info.append("Galaxy: ").append(getName()).append("\n");
@@ -60,25 +62,25 @@ public class Galaxy extends CelestialObject {
 	}
     
 	@Override
+	//function to DRAW the Galaxy
 	public void draw(Graphics g, int x, int y, boolean selected) {
-        // Galaxies are drawn a bit differently from stars
-        int size = 8; // Base size
+		int size = 8; // Base size
         
-        g.setColor(getColor());
+		g.setColor(getColor());
         
-        if (galaxyType.equalsIgnoreCase("Spiral")) {
-            // Draw as a spiral (simplified)
-            g.fillOval(x - size/2, y - size/2, size, size);
-            g.drawOval(x - size, y - size, size*2, size*2);
-        } else if (galaxyType.equalsIgnoreCase("Elliptical")) {
-            // Draw as an ellipse
-            g.fillOval(x - size/2, y - size/3, size, size/2);
-        } else {
-            // Draw as a generic blob
-            g.fillOval(x - size/2, y - size/2, size, size);
+		if (galaxyType.equalsIgnoreCase("Spiral")) {
+		// Draw as a spiral
+		g.fillOval(x - size/2, y - size/2, size, size);
+		g.drawOval(x - size, y - size, size*2, size*2);
+		} else if (galaxyType.equalsIgnoreCase("Elliptical")) {
+		// Draw as an ellipse
+		g.fillOval(x - size/2, y - size/3, size, size/2);
+		} else {
+		// Draw as a generic blob
+		g.fillOval(x - size/2, y - size/2, size, size);
         }
         
-        // If selected, draw a highlight
+        // If selected by user, draw a lil highlight
         if (selected) {
             g.setColor(Color.WHITE);
             g.drawOval(x - size/2 - 2, y - size/2 - 2, size + 4, size + 4);

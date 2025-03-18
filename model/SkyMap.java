@@ -8,7 +8,7 @@ public class SkyMap {
 	private List<CelestialObject> celestialObjects;
 	private CelestialObject selectedObject;
 
-	//constructor
+	//CONSTRUCTOR
 	public SkyMap() {
 		celestialObjects = new ArrayList<>();
 		initCelestialObjects();
