@@ -115,7 +115,9 @@ public class StarFieldPanel extends JPanel {
 
 	//function to draw coordinate grid
 	private void drawCoordinateGrid(Graphics g) {
-		g.setColor(new Color(50, 50, 50)); //dark grey
+		//g.setColor(new Color(50, 50, 50)); //dark grey
+		//g.setColor(new Color(150, 150, 150)); //lighter grey
+		g.setColor(new Color(230, 230, 230)); //almost white
 		
 		//Vertical Right Ascension Lines
 		//24 hrs where 1 hr is 15 degrees of celestial sphere
