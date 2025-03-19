@@ -115,9 +115,9 @@ public class StarFieldPanel extends JPanel {
 
 	//function to draw coordinate grid
 	private void drawCoordinateGrid(Graphics g) {
-		//g.setColor(new Color(50, 50, 50)); //dark grey
+		//LINE DRAWING FIRST
+		g.setColor(new Color(50, 50, 50)); //dark grey
 		//g.setColor(new Color(150, 150, 150)); //lighter grey
-		g.setColor(new Color(230, 230, 230)); //almost white
 		
 		//Vertical Right Ascension Lines
 		//24 hrs where 1 hr is 15 degrees of celestial sphere
@@ -125,7 +125,6 @@ public class StarFieldPanel extends JPanel {
 		for (int ra = 0; ra <= 24; ra += 2) {
 			int x = getWidth() * ra / 24;
 			g.drawLine(x, 0, x, getHeight());
-			g.drawString(ra + "h", x, 15);
 		}
 
 		//Horizontal Declination Lines
@@ -137,8 +136,22 @@ public class StarFieldPanel extends JPanel {
 		for (int dec = -90; dec <= 90; dec += 30) {
 			int y = getHeight() * (90 - dec) / 180;
 			g.drawLine(0, y, getWidth(), y);
+		}
+
+		//DRAW TEXT LABELS
+		g.setColor(new Color(230, 230, 230)); //almost white
+		
+		//RA text laels
+		for (int ra = 0; ra <= 24; ra += 2) {
+			int x = getWidth() * ra / 24;
+			g.drawString("  " + ra + "h", x, 15);
+		}
+
+		//Declination text labels
+		for (int dec = -90; dec <= 90; dec += 30) {
+			int y = getHeight() * (90 - dec) / 180;
 			//ty https://www.degreesymbol.net/
-			g.drawString(dec + "°", 5, y);
+			g.drawString(dec + "°", 5, y + 15); // plus 15 pixel offset to give text a lil padding
 		}
 	}
 }

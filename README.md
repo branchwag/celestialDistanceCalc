@@ -6,6 +6,7 @@ To run:
 
 ```
 javac com/celestialdistance/CelestialDistanceCalculator.java
+javac com/celestialdistance/CelestialDistanceCalculator.java com/celestialdistance/view/*.java com/celestialdistance/model/*.java com/celestialdistance/util/*.java
 java com.celestialdistance.CelestialDistanceCalculator
 ```
 
