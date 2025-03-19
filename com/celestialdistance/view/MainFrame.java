@@ -28,7 +28,7 @@ public class MainFrame extends JFrame {
 	public MainFrame() {
 		setTitle("Celestial Distance Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setMinimumSize(new Dimension(800, 600));
+		setMinimumSize(new Dimension(1200, 600));
 
 		//init model
 		skyMap = new SkyMap();
@@ -43,7 +43,7 @@ public class MainFrame extends JFrame {
 			starFieldPanel,
 			objectInfoPanel
 		);
-		splitPane.setResizeWeight(0.7); //making this 70 percent of width to star field
+		splitPane.setResizeWeight(0.8); //making this 80 percent of width to star field
 
 		//menu bar
 		JMenuBar menuBar = createMenuBar();
