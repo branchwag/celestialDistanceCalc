@@ -1,3 +1,9 @@
+package com.celestialdistance.view;
+
+import com.celestialdistance.model.CelestialObject;
+import com.celestialdistance.model.SkyMap;
+
+
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Graphics;

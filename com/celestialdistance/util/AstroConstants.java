@@ -1,4 +1,4 @@
-
+package com.celestialdistance.util;
 //utility class for astro constants and conversions
 public class AstroConstants { 
 	public static final double SPEED_OF_LIGHT = 299792.458; //km per sec

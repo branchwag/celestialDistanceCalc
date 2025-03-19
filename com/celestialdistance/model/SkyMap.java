@@ -1,3 +1,9 @@
+package com.celestialdistance.model;
+
+import com.celestialdistance.model.CelestialObject;
+import com.celestialdistance.model.Star;
+import com.celestialdistance.model.Galaxy;
+
 import java.util.ArrayList;
 import java.util.List;
 

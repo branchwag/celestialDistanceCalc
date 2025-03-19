@@ -1,3 +1,7 @@
+package com.celestialdistance;
+
+import com.celestialdistance.view.MainFrame;
+
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
