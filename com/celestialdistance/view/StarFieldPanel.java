@@ -141,10 +141,12 @@ public class StarFieldPanel extends JPanel {
 		//DRAW TEXT LABELS
 		g.setColor(new Color(230, 230, 230)); //almost white
 		
-		//RA text laels
+		//RA text labels
 		for (int ra = 0; ra <= 24; ra += 2) {
-			int x = getWidth() * ra / 24;
-			g.drawString("  " + ra + "h", x, 15);
+			if (ra != 0) {
+				int x = getWidth() * ra / 24;
+				g.drawString("  " + ra + "h", x, 15);
+			}
 		}
 
 		//Declination text labels
