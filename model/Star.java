@@ -1,5 +1,3 @@
-package com.celestialdistance.model;
-
 import java.awt.Color;
 
 //class for stars

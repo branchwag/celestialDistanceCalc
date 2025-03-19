@@ -1,6 +1,4 @@
 //ABSTRACT BASE CLASS FOR ALL CELESTIAL OBJECTS
-package com.celestialdistance.model;
-
 import java.awt.Color;
 import java.awt.Graphics;
 

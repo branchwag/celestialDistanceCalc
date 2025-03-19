@@ -1,5 +1,3 @@
-package com.celestialdistance.model;
-
 import java.util.ArrayList;
 import java.util.List;
 

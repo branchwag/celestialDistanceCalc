@@ -1,9 +1,3 @@
-package com.celestialdistance.view;
-
-import com.celestialdistance.model.CelestialObject;
-import com.celestialdistance.model.Star;
-import com.celestialdistance.model.Galaxy;
-
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;

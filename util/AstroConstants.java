@@ -1,4 +1,3 @@
-package com.celestialdistance.util;
 
 //utility class for astro constants and conversions
 public class AstroConstants { 

@@ -1,5 +1,3 @@
-package com.celestialdistance.model;
-
 import java.awt.Graphics;
 import java.awt.Color;
 
