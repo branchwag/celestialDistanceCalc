@@ -52,7 +52,9 @@ public class SkyMap {
 
 		celestialObjects.add(new Star("Procyon", 7.65, 5.23, 0.34, 0.288, 2.66, "F5IV-V"));
 
-		celestialObjects.add(new Star("Polaris", 2.53, 89.26, 1.98, 0.007, -3.6, "F7Ib"));
+		// commenting this one out for now as it was overlapping the 2hr button too much
+		// celestialObjects.add(new Star("Polaris", 2.53, 89.26, 1.98, 0.007, -3.6,
+		// "F7Ib"));
 
 		celestialObjects.add(new Star("Deneb", 20.69, 45.28, 1.25, 0.001, -8.38, "A2Ia"));
 

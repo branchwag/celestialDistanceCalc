@@ -8,4 +8,4 @@ To run:
 javac com/celestialdistance/**/*.java && java com.celestialdistance.CelestialDistanceCalculator
 ```
 
-![Celestial Distance Calculator Screenshot](screenshot1.png)
+![Celestial Distance Calculator Screenshot](screenshot2.png)
