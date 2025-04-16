@@ -33,7 +33,13 @@ public class MainFrame extends JFrame {
 				JSplitPane.HORIZONTAL_SPLIT,
 				starFieldPanel,
 				objectInfoPanel);
+
 		splitPane.setResizeWeight(0.8); // making this 80 percent of width to star field
+		// the below two lines fix an issue where a user could previously resize the
+		// panels, getting them stuck at a weird size
+		// so, no resizing!!
+		splitPane.setDividerSize(0);
+		splitPane.setEnabled(false);
 
 		// set up frame
 		getContentPane().add(splitPane, BorderLayout.CENTER);
