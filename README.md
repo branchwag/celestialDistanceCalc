@@ -1,12 +1,12 @@
 # Celestial Distance Calculator
 
-A little Java app to display a small patch of sky with notable celestial objects. For each celestial object selected, a panel with calculated distance and stats will display.
+A Java app to display a small patch of sky with notable celestial objects. For each celestial object selected, a panel with calculated distance and stats will display.
 
 To run:
 
 ```
-javac com/celestialdistance/*.java com/celestialdistance/model/*.java com/celestialdistance/view/*.java
-java com.celestialdistance.CelestialDistanceCalculator
+javac CelestialDistanceCalculator.java
+java CelestialDistanceCalculator
 ```
 
 ![Celestial Distance Calculator Screenshot](screenshot2.png)

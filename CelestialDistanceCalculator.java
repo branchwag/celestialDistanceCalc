@@ -1,7 +1,3 @@
-package com.celestialdistance;
-
-import com.celestialdistance.view.MainFrame;
-
 //main class to launch app
 public class CelestialDistanceCalculator {
 	// main method
