@@ -38,10 +38,6 @@ public class MainFrame extends JFrame {
 		// set up frame
 		getContentPane().add(splitPane, BorderLayout.CENTER);
 
-		// status bar
-		JPanel statusBar = new JPanel();
-		getContentPane().add(statusBar, BorderLayout.SOUTH);
-
 		// packitup!
 		pack();
 
