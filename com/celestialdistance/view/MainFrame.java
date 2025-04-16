@@ -20,6 +20,8 @@ public class MainFrame extends JFrame {
 		setTitle("Celestial Distance Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setMinimumSize(new Dimension(1200, 600));
+		setResizable(false);
+		setMaximizedBounds(null);
 
 		// init model
 		skyMap = new SkyMap();
