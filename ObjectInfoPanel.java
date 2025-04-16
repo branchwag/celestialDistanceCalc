@@ -33,11 +33,25 @@ public class ObjectInfoPanel extends JPanel {
 		infoTextArea.setEditable(false);
 		infoTextArea.setLineWrap(true);
 		infoTextArea.setWrapStyleWord(true);
+		// fix to ensure there is no cursor when you click into the box
+		infoTextArea.setCaret(new javax.swing.text.DefaultCaret() {
+			@Override
+			public boolean isVisible() {
+				return false;
+			}
+		});
 
 		calcTextArea = new JTextArea(5, 30);
 		calcTextArea.setEditable(false);
 		calcTextArea.setLineWrap(true);
 		calcTextArea.setWrapStyleWord(true);
+		// fix to ensure there is no cursor when you click into the box
+		calcTextArea.setCaret(new javax.swing.text.DefaultCaret() {
+			@Override
+			public boolean isVisible() {
+				return false;
+			}
+		});
 
 		// dropdown list
 		methodComboBox = new JComboBox<>();
