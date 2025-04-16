@@ -13,7 +13,7 @@ import javax.swing.KeyStroke;
 import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension; 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -24,51 +24,48 @@ public class MainFrame extends JFrame {
 	private StarFieldPanel starFieldPanel;
 	private ObjectInfoPanel objectInfoPanel;
 
-	//constructor to set up window
+	// constructor to set up window
 	public MainFrame() {
 		setTitle("Celestial Distance Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setMinimumSize(new Dimension(1200, 600));
 
-		//init model
+		// init model
 		skyMap = new SkyMap();
 
-		//init panels
+		// init panels
 		objectInfoPanel = new ObjectInfoPanel();
 		starFieldPanel = new StarFieldPanel(skyMap, objectInfoPanel);
 
-		//make the split pane layout
+		// make the split pane layout
 		JSplitPane splitPane = new JSplitPane(
-			JSplitPane.HORIZONTAL_SPLIT,
-			starFieldPanel,
-			objectInfoPanel
-		);
-		splitPane.setResizeWeight(0.8); //making this 80 percent of width to star field
+				JSplitPane.HORIZONTAL_SPLIT,
+				starFieldPanel,
+				objectInfoPanel);
+		splitPane.setResizeWeight(0.8); // making this 80 percent of width to star field
 
-		//menu bar
+		// menu bar
 		JMenuBar menuBar = createMenuBar();
-		//set up frame
+		// set up frame
 		setJMenuBar(menuBar);
 		getContentPane().add(splitPane, BorderLayout.CENTER);
 
-		//status bar
+		// status bar
 		JPanel statusBar = new JPanel();
-		JLabel statusLabel = new JLabel("Ready");
-		statusBar.add(statusLabel);
 		getContentPane().add(statusBar, BorderLayout.SOUTH);
 
-		//packitup!
+		// packitup!
 		pack();
-		
-		setLocationRelativeTo(null); //centering on the screen
+
+		setLocationRelativeTo(null); // centering on the screen
 
 	}
 
-	//function to make the menu bar
+	// function to make the menu bar
 	private JMenuBar createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
 
-		//file menu
+		// file menu
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.setMnemonic(KeyEvent.VK_F);
 
@@ -78,7 +75,7 @@ public class MainFrame extends JFrame {
 
 		fileMenu.add(exitItem);
 
-		//view menu
+		// view menu
 		JMenu viewMenu = new JMenu("View");
 		viewMenu.setMnemonic(KeyEvent.VK_V);
 
@@ -88,7 +85,7 @@ public class MainFrame extends JFrame {
 
 		viewMenu.add(refreshItem);
 
-		//help menu
+		// help menu
 		JMenu helpMenu = new JMenu("Help");
 		helpMenu.setMnemonic(KeyEvent.VK_H);
 
@@ -97,13 +94,12 @@ public class MainFrame extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(
-					MainFrame.this,
-					"Celestial Distance Calculator\n" + 
-					"Version 1.0\n\n" +
-					"An app for calculating distances to celestial objects using various astronomical methods.",
-					"About",
-					JOptionPane.INFORMATION_MESSAGE
-				);
+						MainFrame.this,
+						"Celestial Distance Calculator\n" +
+								"Version 1.0\n\n" +
+								"An app for calculating distances to celestial objects using various astronomical methods.",
+						"About",
+						JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 
@@ -116,6 +112,3 @@ public class MainFrame extends JFrame {
 		return menuBar;
 	}
 }
-
-
-
