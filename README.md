@@ -5,7 +5,8 @@ A little Java app to display a small patch of sky with notable celestial objects
 To run:
 
 ```
-javac com/celestialdistance/**/*.java && java com.celestialdistance.CelestialDistanceCalculator
+javac com/celestialdistance/*.java com/celestialdistance/model/*.java com/celestialdistance/view/*.java
+java com.celestialdistance.CelestialDistanceCalculator
 ```
 
 ![Celestial Distance Calculator Screenshot](screenshot2.png)
