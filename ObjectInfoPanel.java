@@ -71,10 +71,14 @@ public class ObjectInfoPanel extends JPanel {
 		methodPanel.add(new JLabel("Calculation Method:"));
 		methodPanel.add(methodComboBox);
 
+		JPanel bottomPanel = new JPanel();
+		bottomPanel.setLayout(new BorderLayout());
+		bottomPanel.add(methodPanel, BorderLayout.NORTH);
+		bottomPanel.add(calcTextArea, BorderLayout.CENTER);
+
 		add(topPanel, BorderLayout.NORTH);
 		add(infoTextArea, BorderLayout.CENTER);
-		add(methodPanel, BorderLayout.SOUTH);
-		add(calcTextArea, BorderLayout.SOUTH);
+		add(bottomPanel, BorderLayout.SOUTH);
 	}
 
 	// function to update the panel info for selected object
