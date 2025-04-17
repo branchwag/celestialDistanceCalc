@@ -136,7 +136,27 @@ public class ObjectInfoPanel extends JPanel {
 				calc.append("Formula: Distance (parsecs) = 1 / parallax (arcseconds)\n");
 				calc.append("Calculation:\n");
 				calc.append("1 / ").append(String.format("%.4f", star.getParallax())).append(" = ");
-				calc.append(String.format("%.2f", star.calcSpecDistance())).append(" light years");
+				calc.append(String.format("%.2f", star.calcParallaxDistance())).append(" light years");
+			} else if (selectedMethod.equals("Spectroscopic Parallax Method")) {
+				calc.append("Formula: 5 * log10(d) = m - M + 5, where d is distance in parsecs\n");
+				calc.append("Calculation:\n");
+				calc.append("m (apparent magnitude) = ")
+						.append(String.format("%.2f", star.getApparentMagnitude()))
+						.append("\n");
+				calc.append("M (absolute magnitude) = ")
+						.append(String.format("%.2f", star.getAbsoluteMagnitude()))
+						.append("\n\n");
+
+				double distanceParsecs = Math.pow(10,
+						(star.getApparentMagnitude() - star.getAbsoluteMagnitude() + 5) / 5);
+				calc.append("d = 10^((").append(String.format("%.2f", star.getApparentMagnitude()))
+						.append(" - ");
+				calc.append(String.format("%.2f", star.getAbsoluteMagnitude())).append(" + 5) / 5) = ");
+				calc.append(String.format("%.2f", distanceParsecs)).append(" parsecs\n");
+
+				double distanceLightYears = distanceParsecs * 3.26;
+				calc.append(String.format("%.2f", distanceParsecs)).append(" parsecs x 3.26 = ");
+				calc.append(String.format("%.2f", distanceLightYears)).append(" light years");
 			}
 		} else if (currentObject instanceof Galaxy) {
 			Galaxy galaxy = (Galaxy) currentObject;
