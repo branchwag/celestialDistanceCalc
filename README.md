@@ -9,4 +9,4 @@ javac CelestialDistanceCalculator.java
 java CelestialDistanceCalculator
 ```
 
-![Celestial Distance Calculator Screenshot](screenshot2.png)
+![Celestial Distance Calculator Screenshot](screenshot3.png)
