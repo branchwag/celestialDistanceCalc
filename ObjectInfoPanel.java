@@ -33,7 +33,9 @@ public class ObjectInfoPanel extends JPanel {
 		infoTextArea.setEditable(false);
 		infoTextArea.setLineWrap(true);
 		infoTextArea.setWrapStyleWord(true);
-		// fix to ensure there is no cursor when you click into the box
+		// a lil padding for the text
+		infoTextArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		// fix to ensure there is no text cursor when you click into the box
 		infoTextArea.setCaret(new javax.swing.text.DefaultCaret() {
 			@Override
 			public boolean isVisible() {
@@ -45,7 +47,9 @@ public class ObjectInfoPanel extends JPanel {
 		calcTextArea.setEditable(false);
 		calcTextArea.setLineWrap(true);
 		calcTextArea.setWrapStyleWord(true);
-		// fix to ensure there is no cursor when you click into the box
+		// adding some padding here as well for the text
+		calcTextArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		// fix to ensure there is no text cursor when you click into the box
 		calcTextArea.setCaret(new javax.swing.text.DefaultCaret() {
 			@Override
 			public boolean isVisible() {
