@@ -9,6 +9,7 @@ import javax.swing.BoxLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -28,6 +29,7 @@ public class ObjectInfoPanel extends JPanel {
 
 		titleLabel = new JLabel("Select an object in the sky");
 		titleLabel.setFont(new Font("Sans-Serif", Font.BOLD, 16));
+		titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
 		infoTextArea = new JTextArea(10, 30);
 		infoTextArea.setEditable(false);
