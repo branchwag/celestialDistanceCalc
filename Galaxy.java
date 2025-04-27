@@ -1,3 +1,9 @@
+//Galaxy.java
+/**
+ * The Galaxy class extends CelestialObject and contains all of the attributes needed for calculating Galaxy distances and displaying them. 
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
 import java.awt.Graphics;
 import java.awt.Color;
 

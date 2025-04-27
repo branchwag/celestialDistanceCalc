@@ -1,3 +1,10 @@
+//StarFieldPanel.java
+/**
+ * The StarFieldPanel contains the SkyMap where a user can click on stars. because of this, listeners for mouse events were set up here. The
+ * background stars are also painted here along with the grid lines and text labels.
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Graphics;

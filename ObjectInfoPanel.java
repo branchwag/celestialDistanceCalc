@@ -1,3 +1,9 @@
+//ObjectInfoPanel.java
+/**
+ * The ObjectInfoPanel is a JPanel that displays information about the selected celestial object. It provides dropdowns for selecting the calc *method.
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;

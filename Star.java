@@ -1,3 +1,9 @@
+//Star.java
+/**
+ * The Star class extends the CelestialObject class and contains all of the attributes needed for calculating the distances of Stars and displaying *them.
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
 import java.awt.Color;
 
 //class for stars
@@ -80,7 +86,7 @@ public class Star extends CelestialObject {
 	}
 
 	@Override
-	// function too return info about the star
+	// function to return info about the star
 	// makes a string with all of the info in it using StringBuilder
 	public String getInfo() {
 		StringBuilder info = new StringBuilder();

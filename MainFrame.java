@@ -1,3 +1,10 @@
+//MainFrame.java
+/**
+ * The MainFrame serves as the core JFrame for the Celestial Distance Calculator, setting up the Panels so that the StarField with its SkyMap sits * on the left and the Info Panel sits on the right. 
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;

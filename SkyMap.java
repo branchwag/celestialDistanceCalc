@@ -1,3 +1,10 @@
+//SkyMap.java
+/**
+ * The SkyMap holds the celestial objects that we are looking at in the Celestial Distance calculator, such as Alpha Centauri A. Each Star and *Galaxy is inited here with the relevant statistics from SIMBAD. 
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
+ 
 import java.util.ArrayList;
 import java.util.List;
 

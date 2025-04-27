@@ -1,4 +1,9 @@
-
+//CelestialObject.java
+/**
+ * The CelestialObject class is an abstract base class for all of the celestial objects seen in the calculator. It contains the base attributes *that all celestial objects have, such as rightAscension (in hours) and declination. 
+ * @author LeAnne Branch
+ * @version Last modified 27_April_2025
+ */
 //ABSTRACT BASE CLASS FOR ALL CELESTIAL OBJECTS
 import java.awt.Color;
 import java.awt.Graphics;
